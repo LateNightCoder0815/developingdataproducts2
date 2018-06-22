@@ -1,0 +1,29 @@
+---
+title: "Analysis of car dataset"
+author: "LateNightCoder0815"
+date: "22 June 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Analysis of car dataset
+
+In this chart we show the mpg by number of cylinders.
+
+```{r}
+suppressMessages(library(plotly))
+
+plot_ly(mtcars, y = ~mpg, color = ~as.factor(cyl), type = "box") %>%
+    layout(
+    xaxis = list(title = "Number of cylinders"),
+    yaxis = list(title = "Miles/(US) gallon")
+    )
+```
+
+
+## Thank you
+
+I would like to thank you for your review!
